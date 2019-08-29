@@ -12,13 +12,53 @@ OT_NATO_Group_Engineers = "rhs_group_nato_usarmy_d_infantry_team_support";
 
 OT_NATO_Unit_TeamLeader = "rhsusf_army_ocp_teamleader";
 OT_NATO_Unit_SquadLeader = "rhsusf_army_ocp_squadleader";
-OT_NATO_Units_LevelOne = ["rhsusf_army_ocp_rifleman","rhsusf_army_ocp_rifleman_m4","rhsusf_army_ocp_autorifleman","rhsusf_army_ocp_medic","rhsusf_army_ocp_riflemanat","rhsusf_army_ocp_grenadier","rhsusf_army_ocp_rifleman_m16","rhsusf_army_ocp_maaws"];
-OT_NATO_Units_LevelTwo = ["rhsusf_usmc_recon_marpat_d_marksman_fast","rhsusf_usmc_recon_marpat_d_autorifleman_fast","rhsusf_socom_marsoc_cso_mk17","rhsusf_usmc_recon_marpat_d_sniper_M107","rhsusf_usmc_lar_marpat_d_autorifleman","rhsusf_usmc_lar_marpat_d_grenadier_m32","rhsusf_usmc_lar_marpat_d_marksman","rhsusf_usmc_marpat_d_smaw","rhsusf_army_ocp_engineer","rhsusf_army_ocp_jfo","rhsusf_army_ocp_machinegunner","rhsusf_army_ocp_machinegunnera","rhsusf_army_ocp_marksman","rhsusf_army_ocp_explosives","rhsusf_army_ocp_sniper_m24sws","rhsusf_army_ocp_aa","rhsusf_army_ocp_javelin","rhsusf_army_ocp_javelin_assistant"];
-OT_NATO_Units_CTRGSupport = ["rhsusf_army_ocp_engineer","rhsusf_army_ocp_jfo","rhsusf_army_ocp_machinegunner","rhsusf_army_ocp_machinegunnera","rhsusf_army_ocp_marksman","rhsusf_army_ocp_explosives","rhsusf_army_ocp_maaws","rhsusf_army_ocp_sniper_m24sws","rhsusf_army_ocp_aa","rhsusf_army_ocp_javelin","rhsusf_army_ocp_javelin_assistant"];
-OT_NATO_Unit_Sniper = "B_Patrol_Soldier_AT_F";
-OT_NATO_Unit_Spotter = "B_T_Recon_LAT_F";
-OT_NATO_Unit_AA_spec = "B_soldier_AA_F";
-OT_NATO_Unit_AA_ass = "B_soldier_AAA_F";
+OT_NATO_Units_LevelOne = ["rhsusf_army_ocp_rifleman",
+"rhsusf_army_ocp_rifleman_m4",
+"rhsusf_army_ocp_autorifleman",
+"rhsusf_army_ocp_medic",
+"rhsusf_army_ocp_riflemanat",
+"rhsusf_army_ocp_grenadier",
+"rhsusf_army_ocp_rifleman_m16",
+"rhsusf_army_ocp_maaws"
+];
+
+OT_NATO_Units_LevelTwo = ["rhsusf_usmc_recon_marpat_d_marksman_fast",
+"rhsusf_usmc_recon_marpat_d_autorifleman_fast",
+"rhsusf_socom_marsoc_cso_mk17",
+"rhsusf_usmc_recon_marpat_d_sniper_M107",
+"rhsusf_usmc_lar_marpat_d_autorifleman",
+"rhsusf_usmc_lar_marpat_d_grenadier_m32",
+"rhsusf_usmc_lar_marpat_d_marksman",
+"rhsusf_usmc_marpat_d_smaw",
+"rhsusf_army_ocp_engineer",
+"rhsusf_army_ocp_jfo",
+"rhsusf_army_ocp_machinegunner",
+"rhsusf_army_ocp_machinegunnera",
+"rhsusf_army_ocp_marksman",
+"rhsusf_army_ocp_explosives",
+"rhsusf_army_ocp_sniper_m24sws",
+"rhsusf_army_ocp_aa",
+"rhsusf_army_ocp_javelin",
+"rhsusf_army_ocp_javelin_assistant"
+];
+
+OT_NATO_Units_CTRGSupport = ["rhsusf_socom_marsoc_cso",
+"rhsusf_socom_marsoc_cso_breacher",
+"rhsusf_socom_marsoc_cso_mk17",
+"rhsusf_socom_marsoc_sarc",
+"rhsusf_socom_marsoc_marksman",
+"rhsusf_socom_marsoc_jtac",
+"rhsusf_socom_marsoc_elementleader",
+"rhsusf_socom_marsoc_cso_grenadier",
+"rhsusf_infantry_socom_armysf_rifleman",
+"rhsusf_army_ocp_javelin",
+"rhsusf_army_ocp_javelin_assistant",
+"rhsusf_army_ocp_aa"
+];
+OT_NATO_Unit_Sniper = "rhsusf_army_ocp_sniper";
+OT_NATO_Unit_Spotter = "rhsusf_army_ocp_marksman";
+OT_NATO_Unit_AA_spec = "rhsusf_army_ocp_aa";
+OT_NATO_Unit_AA_ass = "rhsusf_army_ocp_machinegunnera";
 OT_NATO_Unit_HVT = "rhsusf_army_ocp_officer";
 
 /*
@@ -32,8 +72,6 @@ OT_NATO_Unit_HVT = "rhsusf_army_ocp_officer";
 	};
 }foreach(format["(getNumber(_x >> 'scope') isEqualTo 2) && (getText(_x >> 'faction') isEqualTo '%1')",OT_faction_NATO] configClasses (configFile >> "CfgVehicles"));
 */
-
-OT_NATO_Units_LevelTwo = OT_NATO_Units_LevelOne + OT_NATO_Units_LevelTwo;
 
 OT_NATOobjectives = [];
 OT_NATOcomms = [];

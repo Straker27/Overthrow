@@ -34,7 +34,7 @@ _unit addHeadgear "H_Booniehat_khk";
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
-_unit addVest (OT_allProtectiveVests call BIS_fnc_selectRandom);
+_unit addVest (OT_Crim_Vests call BIS_fnc_selectRandom);
 if(OT_hasTFAR) then {
 	_unit linkItem "tf_fadak";
 }else{
