@@ -1,3 +1,4 @@
+/*
 params [
     "_loadout",
     ["_rifles",OT_allBLURifles],
@@ -166,3 +167,4 @@ if(_hasHandgun) then {
 };
 
 _newloadout
+

@@ -493,19 +493,54 @@ private _allGlasses = "
 " configClasses ( configFile >> "CfgGlasses" );
 
 OT_allFactions = [];
-OT_allSubMachineGuns = [];
+OT_allSubMachineGuns = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhsusf_weap_MP7A2",
+"rhs_weap_g36c",
+"rhs_weap_mk18",
+"rhs_weap_hk416d10"
+];
 OT_allAssaultRifles = [];
 OT_allMachineGuns = [];
 OT_allSniperRifles = [];
 OT_allHandGuns = [];
 OT_allMissileLaunchers = [];
 OT_allRocketLaunchers = [];
-OT_allExpensiveRifles = [];
-OT_allCheapRifles = [];
+OT_allExpensiveRifles = ["rhs_weap_hk416d145",
+"rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhs_weap_hk416d10",
+"rhs_weap_sr25",
+"rhs_weap_mk17_LB"
+];
+OT_allCheapRifles = ["rhs_weap_m70b1",
+"rhs_weap_m70b3n",
+"rhs_weap_pm63",
+"rhs_weap_akm",
+"rhs_weap_akmn",
+"rhs_weap_akms",
+"rhs_weap_m21s_pr",
+"rhs_weap_m21s",
+"rhs_weap_m21s_pr",
+"rhs_weap_m21a",
+"rhs_weap_m76"
+];
 OT_allVests = [];
 OT_allProtectiveVests = [];
-OT_allExpensiveVests = [];
+OT_allExpensiveVests = ["rhsusf_plateframe_rifleman",
+"rhsusf_spc_light"
+];
 OT_allCheapVests = [];
+OT_Crim_Vests = ["rhs_vydra_3m",
+"rhssaf_vest_md12_digital",
+"rhssaf_vest_md99_md2camo",
+"V_Chestrig_blk",
+"V_Chestrig_rgr",
+"V_Chestrig_khk",
+"V_Chestrig_oli",
+"rhs_6sh92",
+"rhs_6b23_ML"
+];
 OT_allClothing = [];
 OT_allOptics = [];
 OT_allHelmets = [];
@@ -519,15 +554,30 @@ OT_allGlasses = [];
 OT_allFacewear = [];
 OT_allGoggles = [];
 OT_allBLURifles = [];
-OT_allBLUSMG = [];
+OT_allGendarmeRifles = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhs_weap_vhsd2",
+"rhs_weap_vhsd2_ct15x",
+"rhs_weap_vhsk2"
+];
+OT_allBLUSMG = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhsusf_weap_MP7A2",
+"rhs_weap_g36c",
+"rhs_weap_mk18",
+"rhs_weap_hk416d10"
+];
 OT_allBLUMachineGuns = [];
 OT_allBLUSniperRifles = [];
 OT_allBLUGLRifles = [];
 OT_allBLULaunchers = [];
-OT_allBLUPistols = [];
+OT_allBLUPistols = ["rhsusf_weap_m9",
+"rhsusf_weap_glock17g4",
+"rhsusf_weap_m1911a1"
+];
 OT_allBLUVehicles = [];
 OT_allBLUOffensiveVehicles = [];
-OT_allBLURifleMagazines = [];
+OT_allBLURifleMagazines = ["rhssaf_30rnd_556x45_EPR_G36","rhsusf_mag_15Rnd_9x19_JHP"];
 
 {
 	private _name = configName _x;

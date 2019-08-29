@@ -11,16 +11,15 @@ if((count _possible) > 0) then {
 
     _gangid = (OT_civilians getVariable ["autogangid",-1]) + 1;
     OT_civilians setVariable ["autogangid",_gangid];
-    _vest = selectRandom OT_allProtectiveVests;
-    _weapon = selectRandom (OT_CRIM_Weapons + OT_allCheapRifles);
-    _loadout = [(format["gang%1",_gangid]),OT_CRIMBaseLoadout,[[_weapon]]] call OT_fnc_getRandomLoadout;
-    (_loadout#4) set [0,_vest];
+    _vest = selectRandom OT_Crim_Vests;
+    OT_civilians setVariable [format["gang%1",_gangid],[[],-1,_town,_vest,_home],true];
+    _gangs pushback _gangid;
 
     //Gang format [members,leader,town,vest,camp pos,loadout,resources,level,name]
 
     private _name = format[selectRandom OT_gangNames,_town,OT_nation];
 
-    OT_civilians setVariable [format["gang%1",_gangid],[[],-1,_town,_vest,_home,_loadout,0,1,_name],true];
+    OT_civilians setVariable [format["gang%1",_gangid],[[],-1,_town,_vest,_home,0,1,_name],true];
     _gangs pushback _gangid;
 
     if(_spawn && _townpos call OT_fnc_inSpawnDistance) then {

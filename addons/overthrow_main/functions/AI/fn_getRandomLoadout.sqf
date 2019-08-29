@@ -1,4 +1,4 @@
-params ["_unit",["_baseloadout",[]],["_params",[]]];
+/*params ["_unit",["_baseloadout",[]],["_params",[]]];
 
 private _index = "";
 if(_unit isEqualType "") then {
