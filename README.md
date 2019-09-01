@@ -1,6 +1,6 @@
 
-# Overthrow-Remastered
-Overthrow - Remastered is a rework of the original Overthrow mission created by armazac @ https://github.com/ArmaOverthrow/Overthrow
+# Overthrow RHS Blufor Alpha
+Overthrow - RHS Blufor is a rework of the original Overthrow mission created by armazac @ https://github.com/ArmaOverthrow/Overthrow
 
 ![image](https://cloud.githubusercontent.com/assets/19246239/17642726/b268a4da-6194-11e6-850a-8951aed0f930.png)
 
@@ -19,6 +19,8 @@ A dynamic and persistent revolution campaign mod for ARMA 3 Apex
 * Recruit and arm civilians
 * Recruit civilians simply just to loot for you
 * Designed to work in both single player and multiplayer
+* RHS USAF units, vehicles and weapons
+* Enhanced gendarmes with a wider array of weapons and SWAT team reinforcements
 
 # Required DLC
 * APEX
@@ -29,7 +31,13 @@ A dynamic and persistent revolution campaign mod for ARMA 3 Apex
 
 # Required Addons
 * ACE3 (Fully integrated) [(Steam Workshop)](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+* RHS Escalation (all 4 modules; USAF, RHS, GREF and SAF)
+* ACE Compat modules for RHS
 
 # To install
-* Overthrow is available on the [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=774201744)
-* or from [Github](https://github.com/ArmaOverthrow/Overthrow.Tanoa/releases/latest)
+* Currently only present on github
+* Note the mission only functions on Tanoa presently!
+* Currently no random unit selections are made for NATO armed forces but the Gendarmerie drawn from multiple countries have a wider range of weapons.
+
+# This is an ALPHA release based on the latest Arma Overthrow (v0.7.8.6) 
+# Not in the slightest bit tested and mostly intended for personal use and as a learning exercise.
