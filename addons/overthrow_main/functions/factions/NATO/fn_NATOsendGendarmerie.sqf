@@ -51,7 +51,7 @@ if(!isNil "_close") then {
 
 	_civ = _group createUnit [OT_NATO_Unit_PoliceCommander, _start, [],0, "NONE"];
 	_police pushBack _civ;
-	[_civ,_town] call OT_fnc_initGendarm;
+	[_civ,_town] call OT_fnc_initSwat;
 	_civ setBehaviour "SAFE";
 	sleep 0.01;
 
@@ -59,21 +59,21 @@ if(!isNil "_close") then {
 	_civ = _group createUnit [OT_NATO_Unit_Police, _start, [],0, "NONE"];
 
 	_police pushBack _civ;
-	[_civ,_town] call OT_fnc_initGendarm;
+	[_civ,_town] call OT_fnc_initSwat;
 	_civ setBehaviour "SAFE";
 
 	_start = [_start, 0, 20, 1, 0, 0, 0] call BIS_fnc_findSafePos;
 	_civ = _group createUnit [OT_NATO_Unit_Police, _start, [],0, "NONE"];
 
 	_police pushBack _civ;
-	[_civ,_town] call OT_fnc_initGendarm;
+	[_civ,_town] call OT_fnc_initSwat;
 	_civ setBehaviour "SAFE";
 
 	_start = [_start, 0, 20, 1, 0, 0, 0] call BIS_fnc_findSafePos;
 	_civ = _group createUnit [OT_NATO_Unit_Police, _start, [],0, "NONE"];
 
 	_police pushBack _civ;
-	[_civ,_town] call OT_fnc_initGendarm;
+	[_civ,_town] call OT_fnc_initSwat;
 	_civ setBehaviour "SAFE";
 
 	if(_usecar) then {

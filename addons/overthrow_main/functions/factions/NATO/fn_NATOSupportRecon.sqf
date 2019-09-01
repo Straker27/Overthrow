@@ -27,7 +27,7 @@ if(isNil "_close") then {
 	}foreach([OT_airportData,[],{random 100},"ASCEND"] call BIS_fnc_SortBy);
 };
 _start = [_close,50,200, 1, 0, 0, 0] call BIS_fnc_findSafePos;
-_group = [_start, WEST,  (configFile >> "CfgGroups" >> "West" >> OT_faction_NATO >> "Infantry" >> OT_NATO_Group_Recon)] call BIS_fnc_spawnGroup;
+_group = [_start, WEST,  (configFile >> "CfgGroups" >> "West" >> "rhs_faction_usmc_d" >> "rhs_group_nato_usmc_recon_d_infantry" >> "rhs_group_nato_usmc_recon_d_infantry_team_lite")] call BIS_fnc_spawnGroup;
 
 sleep 0.5;
 
@@ -56,10 +56,10 @@ if(_isAir) then {
 
 	_spawnpos = _close findEmptyPosition [5,100,OT_NATO_Vehicle_CTRGTransport];
 	_veh =  OT_NATO_Vehicle_CTRGTransport createVehicle _spawnpos;
-	clearWeaponCargoGlobal _veh;
-	clearMagazineCargoGlobal _veh;
-	clearItemCargoGlobal _veh;
-	clearBackpackCargoGlobal _veh;
+//	clearWeaponCargoGlobal _veh;
+//	clearMagazineCargoGlobal _veh;
+//	clearItemCargoGlobal _veh;
+//	clearBackpackCargoGlobal _veh;
 
 	_veh setDir _dir;
 	_tgroup addVehicle _veh;

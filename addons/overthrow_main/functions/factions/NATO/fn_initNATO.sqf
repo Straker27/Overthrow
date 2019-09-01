@@ -142,7 +142,7 @@ if((server getVariable "StartupType") == "NEW" || (server getVariable ["NATOvers
 
 			if(_name isEqualTo OT_NATO_HQ) then {
 				_garrison = 48;
-				server setVariable [format ["vehgarrison%1",_name],["B_T_APC_Tracked_01_AA_F","B_T_APC_Tracked_01_AA_F","B_GMG_01_high_F","B_GMG_01_high_F","B_GMG_01_high_F","B_HMG_01_high_F","B_HMG_01_high_F","B_HMG_01_high_F"],true];
+				server setVariable [format ["vehgarrison%1",_name],["RHS_M6_wd"," RHS_M6_wd","RHS_M2StaticMG_D","RHS_M2StaticMG_D","RHS_M2StaticMG_D","RHS_M2StaticMG_D","RHS_M2StaticMG_D","RHS_M2StaticMG_D"],true];
 				_garr = [];
 				{
 					_x params ["_class","_num"];

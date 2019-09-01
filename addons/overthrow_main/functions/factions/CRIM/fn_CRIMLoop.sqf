@@ -84,17 +84,17 @@ if !(crim_counter < 12) then {
 
                 //Chance to reveal gang camp if support is high
 
-                if !(_gangid in _revealed) then {
-                    private _support = [_town] call OT_fnc_support;
-                    if((random (300 + (_level * 50))) < _support) then {
-                        format["Citizens in %1 have notified us of gang nearby with %2 members (%3)",_town,_numingang + 1,_name] remoteExec ["OT_fnc_notifyMinor",0,false];
-                        _mrkid = format["gang%1",_town];
-                        _mrk = createMarker [_mrkid, _gang select 4];
-                        _mrkid setMarkerType "ot_Camp";
-                        _mrkid setMarkerColor "colorOPFOR";
-                        _revealed pushback _gangid;
-                    };
-                };
+            //    if !(_gangid in _revealed) then {
+            //        private _support = [_town] call OT_fnc_support;
+            //        if((random (300 + (_level * 50))) < _support) then {
+            //            format["Citizens in %1 have notified us of gang nearby with %2 members (%3)",_town,_numingang + 1,_name] remoteExec ["OT_fnc_notifyMinor",0,false];
+            //            _mrkid = format["gang%1",_town];
+            //            _mrk = createMarker [_mrkid, _gang select 4];
+            //            _mrkid setMarkerType "ot_Camp";
+            //            _mrkid setMarkerColor "colorOPFOR";
+            //           _revealed pushback _gangid;
+            //        };
+            //    };
 
                 if(_resources < 0) then {_resources = 0};
                 _gang set [6,_resources];

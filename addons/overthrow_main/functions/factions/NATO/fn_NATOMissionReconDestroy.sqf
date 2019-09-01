@@ -28,7 +28,7 @@ if(isNil "_close") then {
 	}foreach([OT_airportData,[],{random 100},"ASCEND"] call BIS_fnc_SortBy);
 };
 _start = [_close,50,200, 1, 0, 0, 0] call BIS_fnc_findSafePos;
-_group = [_start, WEST, (configFile >> "CfgGroups" >> "West" >> OT_faction_NATO >> "Infantry" >> OT_NATO_Group_Recon)] call BIS_fnc_spawnGroup;
+_group = [_start, WEST, (configFile >> "CfgGroups" >> "West" >> "rhs_faction_socom_marsoc" >> "rhs_group_nato_marsoc_infantry" >> "rhs_group_nato_marsoc_infantry_team")] call BIS_fnc_spawnGroup;
 
 sleep 0.5;
 
@@ -87,7 +87,9 @@ if(_isAir) then {
 	_wp = _tgroup addWaypoint [_ao,0];
 	_wp setWaypointType "MOVE";
 	_wp setWaypointBehaviour "COMBAT";
-	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['Door_rear_source', 1, false];"];
+	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['DoorLB', 1, false];"];
+	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['DoorRB', 1, false];"];
+	_wp setWaypointStatements ["true", "hint 'Recon and destroy mission started'"];
 	_wp setWaypointCompletionRadius 50;
 	_wp setWaypointSpeed "FULL";
 
@@ -98,7 +100,8 @@ if(_isAir) then {
 
 	_wp = _tgroup addWaypoint [_ao,0];
 	_wp setWaypointType "SCRIPTED";
-	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['Door_rear_source', 0, false];"];
+	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['DoorLB', 0, false];"];
+	_wp setWaypointStatements ["true","(vehicle this) AnimateDoor ['DoorRB', 0, false];"];
 	_wp setWaypointTimeout [15,15,15];
 
 	_moveto = [_close,200,_dir] call SHK_pos_fnc_pos;

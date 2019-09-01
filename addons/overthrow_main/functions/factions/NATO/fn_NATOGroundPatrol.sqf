@@ -20,10 +20,10 @@ if !(_frombase in _abandoned) then {
         _x addCuratorEditableObjects [[_veh]];
     }foreach(allCurators);
 
-    clearWeaponCargoGlobal _veh;
-    clearMagazineCargoGlobal _veh;
-    clearItemCargoGlobal _veh;
-    clearBackpackCargoGlobal _veh;
+//    clearWeaponCargoGlobal _veh;
+//    clearMagazineCargoGlobal _veh;
+//    clearItemCargoGlobal _veh;
+//    clearBackpackCargoGlobal _veh;
 
     _group addVehicle _veh;
     createVehicleCrew _veh;

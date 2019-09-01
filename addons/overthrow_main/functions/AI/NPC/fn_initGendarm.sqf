@@ -1,4 +1,4 @@
-private ["_town","_unit","_numweap","_skill","_unit","_magazine","_weapon","_stability","_idx"];
+private ["_town","_unit","_numweap","_skill","_unit","_magazine","_weapon","_stability","_idx","_optics"];
 
 _unit = _this select 0;
 
@@ -69,8 +69,10 @@ if(_hour > 17 || _hour < 6) then {
 	_unit addPrimaryWeaponItem "acc_flashlight";
 };
 
-if((random 100) > 80) exitWith {
-	_unit addPrimaryWeaponItem "optic_Aco_smg"
+
+_optics = selectRandom OT_allGendarmeOptics;
+if((random 100) > 50) exitWith {
+	_unit addPrimaryWeaponItem _optics
 };
 
 _weapon = OT_allBLUPistols call BIS_fnc_selectRandom;

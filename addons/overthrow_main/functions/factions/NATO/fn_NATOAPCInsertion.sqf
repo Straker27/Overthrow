@@ -6,7 +6,7 @@ private _spawnpos = _frompos findEmptyPosition [15,100,_vehtype];
 if(count _spawnpos == 0) then {
 	_spawnpos = [_frompos,[5,25]] call SHK_pos_fnc_pos;
 };
-private _group1 = [_spawnpos, WEST, (configFile >> "CfgGroups" >> "West" >> OT_faction_NATO >> "Infantry" >> _squadtype)] call BIS_fnc_spawnGroup;
+private _group1 = [_spawnpos, WEST, (configFile >> "CfgGroups" >> "West" >> OT_faction_NATO >> OT_faction_NATO_Infantry >> "rhs_group_nato_usarmy_d_infantry_squad")] call BIS_fnc_spawnGroup;
 _group1 deleteGroupWhenEmpty true;
 private _group2 = "";
 private _tgroup = false;
@@ -26,10 +26,10 @@ if(count _pos == 0) then {
 
 _veh = _vehtype createVehicle _pos;
 _veh setVariable ["garrison","HQ",false];
-clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;
-clearItemCargoGlobal _veh;
-clearBackpackCargoGlobal _veh;
+//clearWeaponCargoGlobal _veh;
+//clearMagazineCargoGlobal _veh;
+//clearItemCargoGlobal _veh;
+//clearBackpackCargoGlobal _veh;
 
 _veh setDir (_dir);
 _tgroup addVehicle _veh;

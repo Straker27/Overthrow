@@ -497,6 +497,7 @@ class CfgFunctions
 			class initCriminalGroup {};
 			class initCrimLeader {};
 			class initGendarm {};
+			class initSwat {};
 			class initGendarmPatrol {};
 			class initGunDealer {};
 			class initHarbor {};

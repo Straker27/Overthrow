@@ -55,6 +55,17 @@ OT_NATO_HQ_garrisonDir = 0;
 OT_QRFstart = nil;
 
 // Load mission data
+
+OT_allFactionsNU = [];
+OT_allFactions = [["BLU_GEN_F","Gendarmerie",1,"\a3\Data_F_Exp\Flags\flag_GEN_CO.paa"],
+ ["rhs_faction_vmf","Russia (VMF)",0,"\rhsafrf\addons\rhs_main\data\flag_rus_co.paa"],
+ ["rhs_faction_usarmy_d","USA (Army - D)",1,"\rhsusf\addons\rhsusf_main\data\flag_us_co.paa"],
+ ["rhs_faction_socom","USA (SOCOM)",1,"\rhsusf\addons\rhsusf_main\data\flag_us_co.paa"],
+ ["rhsgref_faction_hidf","Horizon Islands Defence Force",1,"\a3\data_f_exp\flags\flag_tanoa_co.paa"],
+ ["rhsgref_faction_tla","Tanoan Liberation Army",0,"\a3\data_f_exp\flags\flag_tanoa_co.paa"],
+ ["rhssaf_faction_army","SAF (KOV)",2,"\rhssaf\addons\rhssaf_main\data\flags\flag_serbia_co.paa"]
+ ];
+
 call compile preprocessFileLineNumbers "data\names.sqf";
 call compile preprocessFileLineNumbers "data\towns.sqf";
 call compile preprocessFileLineNumbers "data\airports.sqf";
@@ -492,8 +503,181 @@ private _allGlasses = "
     ( getNumber ( _x >> ""scope"" ) isEqualTo 2 )
 " configClasses ( configFile >> "CfgGlasses" );
 
-//start copied to initVar
-//end copied to initVar
+OT_allSubMachineGuns = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhsusf_weap_MP7A2",
+"rhs_weap_g36c",
+"rhs_weap_mk18",
+"rhs_weap_hk416d10"
+];
+OT_allAssaultRifles = [];
+OT_allMachineGuns = [];
+OT_allSniperRifles = [];
+OT_allHandGuns = [];
+OT_allMissileLaunchers = [];
+OT_allRocketLaunchers = [];
+OT_allExpensiveRifles = ["rhs_weap_hk416d145",
+"rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhs_weap_hk416d10",
+"rhs_weap_sr25",
+"rhs_weap_mk17_LB"
+];
+OT_allCheapRifles = ["rhs_weap_m70b1",
+"rhs_weap_m70b3n",
+"rhs_weap_pm63",
+"rhs_weap_akm",
+"rhs_weap_akmn",
+"rhs_weap_akms",
+"rhs_weap_m21s_pr",
+"rhs_weap_m21s",
+"rhs_weap_m21s_pr",
+"rhs_weap_m21a",
+"rhs_weap_m76"
+];
+OT_allVests = [];
+OT_allProtectiveVests = [];
+OT_allExpensiveVests = ["rhsusf_plateframe_rifleman",
+"rhsusf_spc_light"
+];
+OT_allCheapVests = [];
+OT_Crim_Vests = ["rhs_vydra_3m",
+"rhssaf_vest_md12_digital",
+"rhssaf_vest_md99_md2camo",
+"V_Chestrig_blk",
+"V_Chestrig_rgr",
+"V_Chestrig_khk",
+"V_Chestrig_oli",
+"rhs_6sh92",
+"rhs_6b23_ML"
+];
+OT_allClothing = [];
+OT_allOptics = [];
+OT_allHelmets = [];
+OT_allHats = [];
+OT_allAttachments = [];
+OT_allExplosives = [];
+OT_explosives = [];
+OT_detonators = [];
+OT_allDetonators = [];
+OT_allGlasses = [];
+OT_allFacewear = [];
+OT_allGoggles = [];
+OT_allBLURiflesNU = [];
+OT_allBLURifles = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhs_weap_vhsd2",
+"rhs_weap_vhsd2_ct15x",
+"rhs_weap_vhsk2"
+];
+OT_allGendarmeOptics = ["rhsusf_acc_RX01",
+"rhsusf_acc_T1_high",
+"rhsusf_acc_eotech_xps3",
+"rhsusf_acc_compm4",
+"rhsusf_acc_g33_xps3"
+];
+OT_allGendarmeRifles = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhs_weap_vhsd2",
+"rhs_weap_vhsd2_ct15x",
+"rhs_weap_vhsk2"
+];
+OT_allBLUSMGNU = [];
+OT_allBLUSMG = ["rhs_weap_g36c",
+"rhs_weap_g36kv",
+"rhsusf_weap_MP7A2",
+"rhs_weap_g36c",
+"rhs_weap_mk18",
+"rhs_weap_hk416d10",
+"hgun_PDW2000_F",
+"SMG_05_F",
+"rhsusf_weap_MP7A2",
+"SMG_03C_black"
+];
+OT_allBLUMachineGunsNU = [];
+OT_allBLUMachineGuns = ["rhs_weap_m240B",
+"rhs_weap_m249_pip_L",
+"rhs_weap_m249_pip_ris",
+"rhs_weap_m27iar",
+"rhs_weap_m27iar_grip"
+];
+OT_allBLUSniperRiflesNU = [];
+OT_allBLUSniperRifles = ["rhs_weap_m14ebrri",
+"rhs_weap_sr25",
+"rhs_weap_sr25_ec",
+"rhs_weap_mk17_LB",
+"rhs_weap_m24sws_wd",
+"rhs_weap_XM2010_wd"
+];
+
+OT_allBLUGLRiflesNU = [];
+OT_allBLUGLRifles = ["rhs_weap_hk416d145_m320",
+"rhs_weap_m16a4_carryhandle_M203",
+"rhs_weap_m16a4_imod_M203",
+"rhs_weap_m4_m320",
+"rhs_weap_m4a1_m320",
+"rhs_weap_mk18_m320"
+];
+
+OT_allBLULaunchersNU = [];
+OT_allBLULaunchers = ["rhs_weap_fgm148",
+"rhs_weap_fim92",
+"rhs_weap_maaws",
+"rhs_weap_m72a7",
+"rhs_weap_M136"
+];
+
+OT_allBLUPistolsNU = [];
+OT_allBLUPistols = ["rhsusf_weap_m9",
+"rhsusf_weap_glock17g4",
+"rhsusf_weap_m1911a1"
+];
+
+OT_allBLULaunchersNU = [];
+OT_allBLULaunchers = ["rhs_weap_fgm148",
+"rhs_weap_fim92",
+"rhs_weap_maaws",
+"rhs_weap_m72a7",
+"rhs_weap_M136"
+];
+
+OT_allBLUPistolsNU = [];
+OT_allBLUPistols = ["rhsusf_weap_m9",
+"rhsusf_weap_glock17g4",
+"rhsusf_weap_m1911a1"
+];
+OT_allBLUVehiclesNU = [];
+OT_allBLUVehicles = ["rhsusf_M1078A1P2_D_fmtv_usarmy",
+"rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy",
+"rhsusf_M1078A1P2_B_D_fmtv_usarmy",
+"rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy",
+"rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy",
+"rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy",
+"rhsusf_M1083A1P2_B_M2_D_flatbed_fmtv_usarmy",
+"rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy",
+"rhsusf_m1025_d_m2",
+"rhsusf_m1025_d_Mk19",
+"rhsusf_m1025_d",
+"rhsusf_m998_d_2dr_halftop",
+"rhsusf_m998_d_2dr_halftop"
+];
+OT_allBLUOffensiveVehiclesNU = [];
+OT_allBLUOffensiveVehicles = ["rhsusf_stryker_m1126_m2_d",
+"rhsusf_m113d_usarmy",
+"rhsusf_m113d_usarmy_M2402",
+"rhsusf_m113d_usarmy_unarmed",
+"rhsusf_M1117_O",
+"rhsusf_M1220_usarmy_d",
+"rhsusf_M1220_M2_usarmy_d",
+"rhsusf_M1230_M2_usarmy_d",
+"rhsusf_M1232_M2_usarmy_d",
+"rhsusf_M1237_M2_usarmy_d",
+"rhsusf_m1a1aimd_usarmy",
+"RHS_M2A2"
+];
+
+OT_allBLURifleMagazines = ["rhssaf_30rnd_556x45_EPR_G36","rhsusf_mag_15Rnd_9x19_JHP"];
+
 {
 	private _name = configName _x;
 	private _title = getText (_x >> "displayname");
@@ -556,24 +740,24 @@ private _allGlasses = "
 							private _mass = getNumber (configFile >> "CfgWeapons" >> _base >> "WeaponSlotsInfo" >> "mass");
 							_base call {
 								_itemType = ([_cls] call BIS_fnc_itemType) select 1;
-								if(_itemType isEqualTo "MachineGun") exitWith {OT_allBLUMachineGuns pushBackUnique _base};
-								if((_this select [0,7]) == "srifle_" || (_this isKindOf ["Rifle_Long_Base_F", configFile >> "CfgWeapons"])) exitWith {OT_allBLUSniperRifles pushBackUnique _base};
-								if((_this find "_GL_") > -1) exitWith {OT_allBLUGLRifles pushBackUnique _base};
+								if(_itemType isEqualTo "MachineGun") exitWith {OT_allBLUMachineGunsNU pushBackUnique _base};
+								if((_this select [0,7]) == "srifle_" || (_this isKindOf ["Rifle_Long_Base_F", configFile >> "CfgWeapons"])) exitWith {OT_allBLUSniperRiflesNU pushBackUnique _base};
+								if((_this find "_GL_") > -1) exitWith {OT_allBLUGLRiflesNU pushBackUnique _base};
 								private _events = "" configClasses (configFile >> "CfgWeapons" >> _base >> "Eventhandlers");
 								_add = true;
 								{
 									private _n = configName _x;
 									if(_n isEqualTo "RHS_BoltAction") exitWith {_add = false}; //ignore RHS bolt-action rifles
 								}foreach(_events);
-								if(_add && _mass < 61) exitWith {OT_allBLUSMG pushBackUnique _base};
+								if(_add && _mass < 61) exitWith {OT_allBLUSMGNU pushBackUnique _base};
 								if(_add) then {
-									OT_allBLURifles pushBackUnique _base;
+									OT_allBLURiflesNU pushBackUnique _base;
 									OT_allBLURifleMagazines = OT_allBLURifleMagazines + getArray(configFile >> "CfgWeapons" >> _base >> "WeaponSlotsInfo" >> "magazines");
 								};
 							};
 						};
-						if(_base isKindOf ["Launcher", configFile >> "CfgWeapons"]) then {OT_allBLULaunchers pushBackUnique _base};
-						if(_base isKindOf ["Pistol", configFile >> "CfgWeapons"]) then {OT_allBLUPistols pushBackUnique _base};
+						if(_base isKindOf ["Launcher", configFile >> "CfgWeapons"]) then {OT_allBLULaunchersNU pushBackUnique _base};
+						if(_base isKindOf ["Pistol", configFile >> "CfgWeapons"]) then {OT_allBLUPistolsNU pushBackUnique _base};
 					};
 					//Get ammo
 					{
@@ -592,9 +776,9 @@ private _allGlasses = "
 					if(_side isEqualTo 1) then {
 						private _threat = getArray (_x >> "threat");
 						if(_threat#0 > 0.5) then {
-							OT_allBLUOffensiveVehicles pushBackUnique _cls;
+							OT_allBLUOffensiveVehiclesNU pushBackUnique _cls;
 						}else{
-							OT_allBLUVehicles pushBackUnique _cls;
+							OT_allBLUVehiclesNU pushBackUnique _cls;
 						};
 					};
 				};
@@ -608,7 +792,7 @@ private _allGlasses = "
 		spawner setVariable [format["facvehicles%1",_name],_vehicles,true];
 	};
 	if(_side > -1 && _numblueprints > 0) then {
-		OT_allFactions pushback [_name,_title,_side,_flag];
+		OT_allFactionsNU pushback [_name,_title,_side,_flag];
 	};
 }foreach(_allFactions);
 

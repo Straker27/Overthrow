@@ -6,7 +6,7 @@ private _targetPos = _leader getVariable ["OT_targetPos",objNull];
 _gotexp = false;
 _expert = objNull;
 {
-    if("DemoCharge_Remote_Mag" in magazines _x) then {
+    if("rhsusf_m112x4_mag" in magazines _x) then {
         _gotexp = true;
         _expert = _x;
     };
@@ -19,7 +19,7 @@ if(_gotexp) then {
     _expert commandMove _p;
     waitUntil {sleep 1;(!alive _expert) || (_expert distance _targetPos) < 10};
     if(alive _expert) then {
-        _expert removeMagazineGlobal "DemoCharge_Remote_Mag";
+        _expert removeMagazineGlobal "rhsusf_m112x4_mag";
         _p set [2,1];
         _charge = "DemoCharge_Remote_Ammo" createVehicle _p;
         _charge setPosATL _p;
@@ -30,6 +30,7 @@ if(_gotexp) then {
         _wp setWaypointType "MOVE";
         _wp setWaypointBehaviour "COMBAT";
         _wp setWaypointSpeed "FULL";
+		_wp setWaypointStatements ["true", "hint 'Explosion warning'"];
         _expert setVariable ["NOAI",false,true];
 
         sleep 120;
