@@ -1,8 +1,15 @@
-params ["_unit"];
+_unit = _this select 0;
 
-if((random 100) < 75) then {
-	_unit setUnitLoadout [_unit call OT_fnc_getRandomLoadout, true];
+_type = typeof _unit;
+
+//Make silencers rare
+_items = primaryWeaponItems _unit;
+if !(_items#0 isEqualTo "") then {
+	if((random 100) < 99) then {
+		_unit removePrimaryWeaponItem (_items#0);
+	}
 };
+
 
 _unit addEventHandler ["HandleDamage", {
 	_me = _this select 0;

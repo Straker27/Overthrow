@@ -461,9 +461,7 @@ class CfgFunctions
 			class NATOsearch {};
 			class createSquad {};
 			class experience {};
-			class dangerCaused {};
-			class randomizeLoadout {};
-			class getRandomLoadout {};
+			class dangerCaused {};	
 		};
 
 		/*

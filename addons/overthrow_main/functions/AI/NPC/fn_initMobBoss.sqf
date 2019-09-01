@@ -81,7 +81,7 @@ for "_i" from 0 to (_numslots-1) do {
 	};
 };
 
-_weapon = OT_allHandguns call BIS_fnc_selectRandom;
+_weapon = OT_CRIM_Pistols call BIS_fnc_selectRandom;
 _unit addWeaponGlobal _weapon;
 _base = [_weapon] call BIS_fnc_baseWeapon;
 _magazine = (getArray (configFile / "CfgWeapons" / _base / "magazines")) select 0;

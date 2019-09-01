@@ -492,43 +492,8 @@ private _allGlasses = "
     ( getNumber ( _x >> ""scope"" ) isEqualTo 2 )
 " configClasses ( configFile >> "CfgGlasses" );
 
-OT_allFactions = [];
-OT_allSubMachineGuns = [];
-OT_allAssaultRifles = [];
-OT_allMachineGuns = [];
-OT_allSniperRifles = [];
-OT_allHandGuns = [];
-OT_allMissileLaunchers = [];
-OT_allRocketLaunchers = [];
-OT_allExpensiveRifles = [];
-OT_allCheapRifles = [];
-OT_allVests = [];
-OT_allProtectiveVests = [];
-OT_allExpensiveVests = [];
-OT_allCheapVests = [];
-OT_allClothing = [];
-OT_allOptics = [];
-OT_allHelmets = [];
-OT_allHats = [];
-OT_allAttachments = [];
-OT_allExplosives = [];
-OT_explosives = [];
-OT_detonators = [];
-OT_allDetonators = [];
-OT_allGlasses = [];
-OT_allFacewear = [];
-OT_allGoggles = [];
-OT_allBLURifles = [];
-OT_allBLUSMG = [];
-OT_allBLUMachineGuns = [];
-OT_allBLUSniperRifles = [];
-OT_allBLUGLRifles = [];
-OT_allBLULaunchers = [];
-OT_allBLUPistols = [];
-OT_allBLUVehicles = [];
-OT_allBLUOffensiveVehicles = [];
-OT_allBLURifleMagazines = [];
-
+//start copied to initVar
+//end copied to initVar
 {
 	private _name = configName _x;
 	private _title = getText (_x >> "displayname");
